@@ -1,0 +1,21 @@
+{
+  "name": "git-watch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --trace-uncaught index.js",
+    "sync_internal": "rsync -a --delete lib ../git-watch-custom-node-ci && rsync -a --delete test-payloads ../git-watch-custom-node-ci && \\cp package.json ../git-watch-custom-node-ci && \\cp index.js ../git-watch-custom-node-ci && \\cp start.sh ../git-watch-custom-node-ci"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "fs": "0.0.1-security",
+    "github-webhook-handler": "^0.7.1",
+    "smee-client": "^2.0.4",
+    "stack-trace": "0.0.10"
+  }
+}
